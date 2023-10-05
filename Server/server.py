@@ -3,6 +3,7 @@ import threading
 import pickle
 import rsa
 import os.path
+from flask import Flask, render_template, jsonify
 
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -39,11 +40,11 @@ def client_Handler(client_socket, privateKey):
     print(request)
     print(" from Client")
     # hier Logik einbauen
-    # was genau soll der server eigentlich können?
-    # Sachen in ne Datei speichern? 
-    # Einfach ausgeben?
-    # Muss der Client noch mehr Infos verschicken?
-    # 
+    # An die Webseite schicken
+    # Muss der Client noch mehr Infos verschicken? Eventuell nen Header in  der Nachricht? Maybe verschiedene Routen?
+    # Wie starte ich die anderen Python Scripte? EInfach importieren? oder mit Subprocess?
+
+    
     
 
 
