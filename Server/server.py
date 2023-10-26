@@ -4,6 +4,9 @@ import pickle
 import rsa
 import os.path
 from flask import Flask, render_template, jsonify
+import sys
+sys.path.insert(1, '/VulnerabilityScanner')
+import Client as VS
 
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
