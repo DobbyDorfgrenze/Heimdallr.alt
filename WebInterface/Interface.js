@@ -1,7 +1,20 @@
 
 
+window.addEventListener("load", (event) => {
+    
+
+    document.getElementById("networkButton").addEventListener("click", async () => {
+        console.log("dsjkbhdsjkbajkbd");
+        
+        const data = document.getElementById("networkInput");
+        const encodedMessage = new TextEncoder().encode(data);
+        console.log(encodedMessage)
+        const ws = new WebSocket("ws://localhost:9999");
+        ws.send(encodedMessage);
+    });
+});
 // JavaScript for displaying dynamic content (replace with actual data)
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', ()=>  {
     const statisticsWidget = document.querySelector('.widget#statistics .widget-content');
     const chartWidget = document.querySelector('.widget#vulnerability-distribution .widget-content');
 
@@ -23,10 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update chart content (use your preferred chart library)
     // Example: createChart(chartWidget, chartData);
+
+
 });
 
 
-const socket = new WebSocket("ws://localhost:8765");
+/*const socket = new WebSocket("ws://localhost:5876");
 
 // Handle messages from the server
 socket.addEventListener("message", (event) => {
@@ -42,4 +57,4 @@ socket.addEventListener("message", (event) => {
 // Handle connection errors
 socket.addEventListener("error", (event) => {
     console.error("WebSocket error:", event);
-});
+});*/

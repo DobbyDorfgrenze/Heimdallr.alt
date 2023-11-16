@@ -37,7 +37,7 @@ def enumerate_pages(base_url):
                 vulnarabilities.append(analyze_page(response.text, url))
 
         
-                #print(vulnarabilities)
+                print(vulnarabilities)
 
                 soup = BeautifulSoup(response.text, 'html.parser')
                 for link in soup.find_all('a', href=True):
@@ -64,6 +64,6 @@ def enumerate_pages(base_url):
         encMessage = s.recv(2048)
  
 if __name__ == "__main__":
-    base_url = "https://www.google.com" 
+    base_url = "https://wwww.bing.com"
     enumerate_pages(base_url)
 
